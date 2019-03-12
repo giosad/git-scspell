@@ -1,0 +1,10 @@
+spell check working copy not committed files
+
+scspell --report-only (git status --porcelain | grep .swift | awk '{print $2;}')
+
+scspell --report-only (git status --porcelain | grep -E "(\.mm|\.h|\.swift)" | awk '{print $2;}') 
+ scspell --report-only (git diff --name-only | grep -E "(\.mm|\.h|\.swift)")
+
+
+
+scspell --report-only (git diff --name-only (git merge-base --fork-point upstream/develop).. | grep -E "(\.mm|\.h|\.swift)\$")
