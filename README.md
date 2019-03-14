@@ -1,20 +1,14 @@
 # scspell-dict
 
-*WIP - NOT READY TO USE*
-
 ## How to use
 
 ### One time setup (in shell)
-- `pip install scspell3k`
-//- `scspell --set-dictionary=./dict.txt`
-- `make install` ... or install script
+- `./install.sh`
+- Add `~/bin` to your `PATH`
 
 ### Check spelling on your branch
-In the git repo root folder:
-`scspell-dict branch-report [--base upstream/develop]` - generate report for the changed/new files in your branch
-`scspell-dict branch [--base upstream/develop]` - run on the changed/new files in your branch
-scspell-dict all [--recursive] - run on all files
+In the some project git repo folder:
+`git scspell-branch` - generate report for the changed/new files in your branch
 
-### Update dictionary
-
-`scspell-dict update` - to update everything (dictionary file, scripts etc)
+### Update dictionary/scripts
+This is a regular git repository, just pull from it and it will update to the latest dictionary and scripts, no need to run install.sh again. 
