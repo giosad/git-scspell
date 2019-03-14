@@ -3,12 +3,16 @@
 ## How to use
 
 ### One time setup (in shell)
-- `./install.sh`
-- Add `~/bin` to your `PATH`
+- Clone the scspell-dict and run `./install.sh` from the cloned copy
+- Add `~/bin` to your `PATH` environment variable.
 
-### Check spelling on your branch
+### Check spelling in source code on your branch
+Invoke `git scspell -h` to get all command options. 
+
 In the some project git repo folder:
-`git scspell-branch` - generate report for the changed/new files in your branch
+`git scspell -b` - generate report for the changed/new files in your branch relative to upstream/develop.
+`git scspell -a` - generate report for all the source files in the current directory.
+`git scspell -a -i` - runs spell check in an interactive mode that allows you to fix spelling errors at prompt, edit dictionary etc.
 
 ### Update dictionary/scripts
 This is a regular git repository, just pull from it and it will update to the latest dictionary and scripts, no need to run install.sh again. 
