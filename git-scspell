@@ -1,0 +1,56 @@
+#!/bin/sh
+set -e
+FORK_POINT="upstream/develop"
+REPORT_ONLY="--report-only"
+while getopts 'bf:aih' OPTION; do
+  case "$OPTION" in
+    b)
+      BRANCH_ONLY=1
+      ;;
+    f)
+      FORK_POINT="$OPTARG"
+      echo "The fork-point provided is $FORK_POINT"
+      ;;
+    a)
+      ALL_FILES=1
+      ;;
+    i)
+      REPORT_ONLY=""
+      echo "Interactive mode ON"
+      ;;
+    h)
+      echo "git scspell checks spelling in the source code files." >&2
+      echo "script usage: git scspell (-b|a) [-i] [-f fork_point]" >&2
+      echo "\t-a - check all source files in the current directory" >&2
+      echo "\t-b - check all source files branched of some fork_point." >&2
+      echo "\t-f - set fork_point for -b command. Defaults to upstream/develop." >&2
+      echo "\t-i - Run scspell in interactive mode (allows adding unknown to dictionary etc.)" >&2
+      echo "Example: to check files in a hotfix branch: git scspell -b -f upstream/release/1.17" >&2
+      exit 1
+      ;;
+  esac
+done
+shift "$(($OPTIND -1))"
+
+if test "$BRANCH_ONLY" = "1" && test "$ALL_FILES" = "1"; then
+  echo "Error: Can't use both -a (all files) and -b (branch only) options." >&2
+  exit 1
+fi
+
+if test -z "$BRANCH_ONLY" && test -z "$ALL_FILES"; then
+  echo "Error: Should provide either -a (all files) or -b (branch only) option." >&2
+  exit 1
+fi
+
+SOURCE_FILES_MASK="(\.mm|\.h|\.swift)\$"
+
+if test "$BRANCH_ONLY" = "1"; then
+  GIT_ROOT=$(git rev-parse --show-toplevel)
+  pushd $GIT_ROOT > /dev/null
+  scspell --use-builtin-base-dict $REPORT_ONLY $(git diff --name-only $(git merge-base --fork-point $FORK_POINT).. | grep -E $SOURCE_FILES_MASK)
+  popd
+fi
+
+if test "$ALL_FILES" = "1"; then
+  scspell --use-builtin-base-dict $REPORT_ONLY $(ls -1 | grep -E $SOURCE_FILES_MASK)
+fi
