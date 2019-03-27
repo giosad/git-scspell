@@ -5,7 +5,8 @@
 ### One time setup (in shell)
 - Clone the git-scspell and run `./install.sh` from the cloned copy.
 - Add `~/bin` to your `PATH` environment variable. If you don't have it:
-  - For bash, run: `echo 'export PATH=$PATH:~/bin' >> ~/.bashrc`
+  - For bash, run: 
+     - `echo 'export PATH=$PATH:~/bin' >> ~/.bash_profile`
   - For fish: `echo 'set PATH $PATH ~/bin' >> ~/.config/fish/config.fish`
 
 ### Check spelling in source code on your branch
