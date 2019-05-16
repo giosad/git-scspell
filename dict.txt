@@ -278,6 +278,7 @@ subfeature
 subfolders
 subregion
 subsampled
+substring
 subview
 superview
 swizzling
