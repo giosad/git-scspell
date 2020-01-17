@@ -6,6 +6,7 @@ argv
 autoconnect
 autoreleasepool
 autoreleasing
+autoreverses
 bezier
 bgra
 cbegin
@@ -24,10 +25,14 @@ gaussian
 grubcut
 initializer
 instancetype
+iosurface
 keypath
 keypaths
 kindof
 kinesis
+mipmapped
+mlmodelc
+nnmodel
 noescape
 nonatomic
 nonnull
@@ -37,6 +42,7 @@ nullable
 nullptr
 objc
 onboarding
+prefetching
 readonly
 readwrite
 rects
@@ -44,12 +50,15 @@ renderer
 renderers
 runloop
 serializable
+simd
 strongify
+strtol
 structs
 subitems
 subsampling
 subview
 subviews
+texcoord
 touchpose
 triger
 tuples
@@ -75,15 +84,34 @@ uchar
 
 FILETYPE: Swift; .swift
 associatedtype
+attribs
 autoclosure
+avaplayer
+bgra
+codable
+cropbox
 decodable
+denormalization
 fileprivate
+hasher
+inout
+iosurface
+keypath
+memoryless
+mipmapped
+nnmodel
 objc
+prefetching
 rxswift
+sqrt
 subviews
 superlayer
 swiftlint
+threadgroup
+threadgroups
 typealias
+unorm
+unretained
 
 NATURAL:
 abitbol
@@ -133,6 +161,7 @@ demultiplexer
 dequeue
 dequeued
 deserializes
+diffable
 downsample
 downsampled
 downsampling
@@ -192,6 +221,7 @@ laplacian
 lerp
 lightricks
 lior
+localizable
 luma
 lzfse
 macau
@@ -202,6 +232,7 @@ middlewares
 mipmap
 modelview
 multicasted
+namespacing
 nelder
 neria
 nofar
@@ -212,6 +243,7 @@ offscreen
 ofir
 opencv
 ophir
+oren
 paintcode
 parameterized
 parsable
@@ -234,6 +266,8 @@ rasterization
 rasterize
 reactively
 realtime
+rects
+redeclared
 redeye
 redux
 regressor
@@ -264,6 +298,7 @@ shaders
 shalev
 shopix
 siman
+simd
 slideshare
 slideshow
 smashbox
@@ -286,6 +321,7 @@ taggable
 taiwan
 talesnik
 taplytics
+texcoord
 todo
 truthy
 tzvi
@@ -300,6 +336,8 @@ upscaled
 upscaling
 urls
 ushort
+versioned
+vibrance
 weinfeld
 weiss
 whitelisted
@@ -312,6 +350,7 @@ yaml
 yaron
 yitzhack
 yohay
+yonatan
 yoresh
 zeev
 
