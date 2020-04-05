@@ -47,7 +47,7 @@ SOURCE_FILES_MASK="(\.mm|\.h|\.swift)\$"
 if test "$BRANCH_ONLY" = "1"; then
   GIT_ROOT=$(git rev-parse --show-toplevel)
   pushd "$GIT_ROOT" > /dev/null
-  scspell --use-builtin-base-dict $REPORT_ONLY $(git diff --name-only $(git merge-base --fork-point $FORK_POINT).. | grep -E $SOURCE_FILES_MASK)
+  scspell --use-builtin-base-dict $REPORT_ONLY $(git diff --name-only $(git merge-base HEAD $FORK_POINT).. | grep -E $SOURCE_FILES_MASK)
   popd
 fi
 
