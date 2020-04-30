@@ -133,6 +133,7 @@ alzurba
 anass
 animatable
 applestore
+appsflyer
 archiver
 asia
 augend
@@ -216,6 +217,7 @@ hochman
 homography
 hong
 https
+icloud
 idfv
 inger
 initializer
@@ -225,8 +227,10 @@ iosad
 ipad
 iphone
 jacob
+jailbroken
 jonathan
 jpeg
+keren
 keychain
 keyframe
 kong
@@ -344,6 +348,7 @@ superview
 swizzling
 taggable
 taiwan
+talia
 talesnik
 taplytics
 texcoord
@@ -352,6 +357,7 @@ todo
 truthy
 tweening
 tzvi
+unarchiver
 unarchives
 unarchiving
 unclamped
