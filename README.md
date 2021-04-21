@@ -9,6 +9,8 @@
     - `echo 'export PATH=$PATH:~/bin' >> ~/.bash_profile`
   - For fish: 
     - `echo 'set PATH $PATH ~/bin' >> ~/.config/fish/config.fish`
+  - For zsh:
+    - `echo 'export PATH=$PATH:~/bin' >> ~/.zshrc`
 - Restart the shell, so the `PATH` adjustment will apply.
 
 ### Check spelling in source code on your branch
